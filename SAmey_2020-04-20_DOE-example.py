@@ -23,6 +23,7 @@ for SimuRef in SimuList: #We create a loop to iterate over SimuList
     s.view_framerate = NbOfFramesPerSimu/SimulationTime[SimuRef] #We set the view framerate equal to simulation framerate
     s.save() #save the current configuration
     s.simulate(0, str(SimulationTime[SimuRef])+"s") #Launches the simulation according to SimulationTime duration
+    #C:/AVL_AST/PreonLab/PreonLab/ffmpeg-20190212-9f33b0e-win64-static/bin/ffmpeg.exe -f image2 -start_number 0 -framerate 10 -i C:/Avamar/U22P37/PreonScenes/untitled/Visualization/PreonRenderer_1/CamPersp/%06d.png -vf "pad=width=iw+mod(iw\,2):height=ih+mod(ih\,2):x=0:y=0:color=black" -r 10 -c:v libx264 -pix_fmt yuv420p -crf 23 -t 8.6 C:/Avamar/U22P37/PreonScenes/outputfile.mp4
     
     
     
